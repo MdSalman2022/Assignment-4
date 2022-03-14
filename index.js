@@ -63,10 +63,8 @@ var products = [
 let search = "laptop"
 
 
-// Changing the search string for matching the array
+//modifying the search string to match products
 const searchResult = search.charAt(0).toUpperCase() + search.slice(1).toLowerCase()
-
-
 
 for(let i = 0; i < products.length; i++) {
     
@@ -74,11 +72,13 @@ for(let i = 0; i < products.length; i++) {
         console.log("You are looking for " + products[i].title + ":");
         let result = products[i]
         console.log(result);
+        return result
     }
 
     else if (searchResult !== products[i].title){
         result = "Product did not matched"
         // console.log(result);
+
     }
 }
 console.log(result);
@@ -88,8 +88,8 @@ console.log(result);
 
 
 
-
 // Problem - 3 Hidden Billionaire Calculator
+//You need to comment out problem 2 to see problem 3 result in the terminal...because of using return in problem 2...problem 3 not showing in terminal
 console.log("\n----------------------Problem - 3----------------------\n");
 
 function SavingYear(year) {
