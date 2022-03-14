@@ -1,4 +1,4 @@
-// // //Problem - 1 Budget Calculator
+//Problem - 1 Budget Calculator
 console.log("----------------------Problem - 1----------------------\n");
 
 function NumberOfProducts(C,W,Cof){
@@ -60,39 +60,29 @@ var products = [
 
 // Search your product
 
-let search = "Laptop"
+let search = "laptop"
+
+
+// Changing the search string for matching the array
+const searchResult = search.charAt(0).toUpperCase() + search.slice(1).toLowerCase()
 
 
 
 for(let i = 0; i < products.length; i++) {
     
-    if(search === products[i].title){    
+    if(searchResult === products[i].title){    
         console.log("You are looking for " + products[i].title + ":");
         let result = products[i]
         console.log(result);
     }
 
-    else if (search !== products[i].title){
+    else if (searchResult !== products[i].title){
         result = "Product did not matched"
         // console.log(result);
     }
 }
 console.log(result);
 
-
-
-// Changing the search string for matching the array
-// const nameCapitalized = search.charAt(0).toUpperCase() + search.slice(1).toLowerCase()
-// let found = products.find( ({ title }) => title === nameCapitalized );
-// condition to show "product not found" when .find result is undefined
-// if(found === undefined){
-//     console.log("You serached for: " + nameCapitalized)
-//     console.log("\nProduct Not Found");
-// }
-// else{
-//     console.log("Here is your search result: \n" + nameCapitalized)
-//     console.log(found)
-// }
 
 
 
